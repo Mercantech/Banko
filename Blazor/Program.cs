@@ -12,6 +12,9 @@ namespace Blazor
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
+            // Tilføj scraping service
+            builder.Services.AddScoped<Blazor.Services.BankoScrapingService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
